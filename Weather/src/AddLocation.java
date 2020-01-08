@@ -63,6 +63,7 @@ public class AddLocation extends HttpServlet {
 	    	CurrentWeather cwd;
 	    	try {
 	    		 cwd = owm.currentWeatherByCityName(city);
+			 city=cwd.getCityName();
 			} catch (APIException e) {
 				System.out.println("Wrong city name");
 				out.println("Wrong Cityname to add");
